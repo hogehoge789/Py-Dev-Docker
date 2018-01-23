@@ -26,4 +26,6 @@ RUN set -x && \
     git config --global color.status auto && \
     git config --global color.branch auto
 
+COPY id_rsa ~/.ssh/
+
 CMD [ "/bin/bash" ]
