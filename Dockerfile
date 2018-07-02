@@ -1,10 +1,10 @@
-# CentOS Latest Install
+# Python Latest Install
 FROM python:latest
 MAINTAINER ueno.k
 
 # VIM Install
 RUN set -x && \
-      apt-get update
+      apt-get update && \
       apt-get install -y vim
 
 # Git Setting
@@ -14,5 +14,7 @@ RUN set -x && \
     git config --global color.diff auto && \
     git config --global color.status auto && \
     git config --global color.branch auto
+
+WORKDIR /opt/
 
 CMD [ "/bin/bash" ]
